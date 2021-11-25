@@ -105,7 +105,7 @@ class WinUsbPy(object):
         return self.device_paths
 
     def find_device(self, path):
-        return is_device(self._name, self._vid, self._pid, path)
+        return is_device(self._vid, self._pid, path, self._name)
 
     def init_winusb_device(self, name, vid, pid):
         self._vid = vid
